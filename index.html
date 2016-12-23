@@ -2,8 +2,215 @@
 <html>
 <head>
 	<title>beep</title>
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<style type="text/css">
+
+		.card-1 {
+		  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+		  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+		}
+
+		.card-1:hover {
+		  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		}
+
+		.card-2 {
+		  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		}
+
+		.card-3 {
+		  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		}
+
+		.card-4 {
+		  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		}
+
+		.card-5 {
+		  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+		}
+
+
+				.typed-cursor{
+		    opacity: 1;
+		    -webkit-animation: blink 0.7s infinite;
+		    -moz-animation: blink 0.7s infinite;
+		    animation: blink 0.7s infinite;
+		}
+		@keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+
+		#selector{ 
+		background-repeat: no-repeat;
+		    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+		       -moz-animation: fadein 2s; /* Firefox < 16 */
+		        -ms-animation: fadein 2s; /* Internet Explorer */
+		         -o-animation: fadein 2s; /* Opera < 12.1 */
+		            animation: fadein 2s;
+		}
+		@keyframes fadein {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
+
+		/* Firefox < 16 */
+		@-moz-keyframes fadein {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
+
+		/* Safari, Chrome and Opera > 12.1 */
+		@-webkit-keyframes fadein {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
+
+		/* Internet Explorer */
+		@-ms-keyframes fadein {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
+
+		/* Opera < 12.1 */
+		@-o-keyframes fadein {
+		    from { opacity: 0; }
+		    to   { opacity: 1; }
+		}
+
+		a,p{
+			display: inline-block;
+			background-color: #000;
+			opacity: 0.9;
+			color: #fff;
+			margin: 11px;
+			padding: 11px;
+		}	
+		h1,h2{ 
+			display: inline;
+			background-color: #fff;
+			 opacity: 0.7;
+			color: #000;
+			margin: 11px;
+			padding: 11px;
+		}
+		body,html{
+			font-family: 'Anton', sans-serif;
+			font-size: 110%;
+			text-align: center;
+		}
+		#main{
+			margin-top: 2%
+		}
+	</style>
+ 
 </head>
-<body>
-boop
+<body id="selector">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+<script>
+    $(function(){
+        $(".element").typed({
+            strings: [
+				'"tab" to "toggleActiveFileSystemView"',
+				'"down" to "navigateToNextRow"',
+				'"up" to "navigateToPreviousRow"',
+				'"enter" to "enterActiveRow"',
+				'"backspace" to "navigateToParentFolder"',
+				'"space" to "selectActiveRow"',
+				'"esc" to "unselectAllRows"',
+				'"ctrl+a" to "selectAll"',
+				'"ctrl+shift+a" to "invertSelection"',
+				'"ctrl+s" to "selectByFileExtension"',
+				'"ctrl+f12" to "settings"',
+				'"f12" to "toggleDevTools"',
+				'"ctrl+alt+left" to "historyJumpBackward"',
+				'"ctrl+alt+right" to "historyJumpForward"',
+				'"right" to "changeDirectory"',
+				'"ctrl+b" to "toggleBookmark"',
+				'"ctrl+shift+b" to "showBookmarks"',
+				'"ctrl+y" to "copyFilenamesWithPath"',
+				'"ctrl+shift+y" to "copyFilenames"',
+				'"ctrl+shift+c" to "copyFileSystemViewPath"',
+				'"ctrl+shift+alt+y" to "copyFilenamesWithExtendedInfo"',
+				'"f5" to "copy"',
+				'"ctrl+f7" to "createFile"',
+				'"f7" to "createFolder"',
+				'"del" to "moveToTrash"',
+				'"f4" to "open"',
+				'"ctrl+p" to "preview"',
+				'"ctrl+enter" to "openShell"',
+				'"ctrl+r" to "reload"',
+				'"f5" to "reload"',
+				'"ctrl+f5" to "reloadHard"',
+				'"f2" to "rename"',
+				'"ctrl+e" to "showItemInFolder"',
+            ],
+            typeSpeed: 10,
+            backDelay: 3000,
+            backSpeed: 0,
+            // shuffle the strings
+ 			shuffle: true,
+        });
+        GetRandomBackground()
+    });
+
+    function GetRandomBackground()
+	{
+
+	  var url = 'http://unsplash.com/rss';
+
+	  $.ajax({
+	    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+	    async: false,
+	    jsonpCallback: 'jsonCallback',
+	    contentType: "application/json",
+	    dataType: 'jsonp',
+	    success: function(json) {
+	      
+	      var min = 0;
+	      var max = json.responseData.feed.entries.length;
+	      // and the formula is:
+	      var random = Math.floor(Math.random() * (max - min + 1)) + min;
+
+	      var str = json.responseData.feed.entries[random].content;
+
+	      var regex = /<img.*?src="(.*?)"/;
+	      var src = regex.exec(str)[1];
+
+	      $('#selector').css('background-image','url('+src+')');
+	      $('#selector').css('background-size','cover');
+	      
+	    }
+	  });
+
+	}
+
+</script>
+<div id="main">
+	<h1 class="card-5">SULU</h1><br><br>
+	<h2 class="card-3">//</h2><h2 class="card-4">A hackable file manager application for Linux, Windows and OS X</h2><br><br>
+	<a class="card-1" href="https://github.com/sulu-one/sulu">/Source Code</a>
+	<a class="card-1" href=" https://sulu-one.github.io/sulu/docs/api">/Developer API</a> 
+	<a class="card-1" href="https://github.com/sulu-one/sulu/releases">/Downloads</a>  
+	<a class="card-1" href="https://s-a.github.io/donate/">/Donate</a>  
+	<br><br>
+	<p  class="card">
+		You might want to press <span class="element"></span>
+	</p>
+</div>
+
 </body>
 </html>
