@@ -144,7 +144,6 @@
  	</style>
 </head>
 <body id="selector">
-	<script src="node_modules/look-at-this/dist/look-at-this.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
 	<script>
@@ -220,18 +219,19 @@
 <br><br>
 <br>
 			<div id="social-icons"></div>
+			<script src="node_modules/look-at-this/dist/look-at-this.min.js"></script>
 			<script type="text/javascript">
-			    // default configuration
-			    if (!window.socialIcons.setup){
-			        window.socialIcons.setup = {
-			            title   : document.title,
-			            url     : location.href,
-			            subject : "A hackable file manager application",
-			            body    : function(){
-			                return "A crossplatform filemanager written for softwaredevelopment at " + window.socialIcons.setup.url;
-			            }
-			        };
-			    }
+			    // default configuration 
+				window.socialIcons.setup = {
+				    title   : document.title,
+				    githubUrl  : "https://github.com/sulu-one/sulu",
+				    url     : location.href,
+				    subject : "A hackable file manager application",
+				    body    : function(){
+				        return "A crossplatform filemanager written for softwaredevelopment at " + window.socialIcons.setup.url;
+				    }
+				}; 
 			</script>
+			
 </body>
 </html>
