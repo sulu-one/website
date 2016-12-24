@@ -3,6 +3,7 @@
 <head>
 	<title>beep</title>
 	<link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+	<link href="node_modules/look-at-this/dist/look-at-this.min.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<style type="text/css">
 
@@ -91,7 +92,7 @@
 		    to   { opacity: 1; }
 		}
 
-		a,p{
+		.lnk {
 			display: inline-block;
 			background-color: #0D0D0D;
 			opacity: 1;
@@ -125,10 +126,7 @@
  			font-size: 220%;
  		}
  		.logo{
-			display: inline-block;
-			position: relative;
-			    top: 70px;
-    left: 10px;
+ 
 		}
 
 		.brand{ 
@@ -137,7 +135,7 @@
 			background-color: #FFFFCC;
 		}
 		.ticker{
-			line-height: 10px;
+			line-height: 80px;
 		}
 
 		a{
@@ -146,6 +144,7 @@
  	</style>
 </head>
 <body id="selector">
+	<script src="node_modules/look-at-this/dist/look-at-this.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
 	<script>
@@ -197,9 +196,9 @@
 
 		} 
 	</script>
- 
-			<img class="logo" src="logo__inkscape.svg" width="170">
-<h1 class="card-5">SULU</h1><h2 class="card-3">//</h2><br><br><br>
+ 		
+		<img class="logo" src="logo__inkscape.svg" width="170">
+		<h1 class="card-5">SULU</h1><h2 class="card-3">//</h2><br><br><br>
 
 		<div>
 			
@@ -207,14 +206,32 @@
 		</div>
 
 		<div>
-			<a class="card-1" href="https://github.com/sulu-one/sulu"><i class="fa fa-github" aria-hidden="true"></i> Code</a>
-			<a class="card-1" href="https://github.com/sulu-one/sulu/tree/master/docs"><i class="fa fa-cogs" aria-hidden="true"></i> API</a> 
-			<a class="card-1" href="https://github.com/sulu-one/sulu/releases"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</a>  
-			<a class="card-1" href="https://github.com/sulu-one/sulu/issues/new"><i class="fa fa-bug" aria-hidden="true"></i></i> Submit a bug</a>  
-			<a class="card-1" href="https://s-a.github.io/donate/"><i class="fa fa-cc-paypal" aria-hidden="true"></i> Donate</a>  
+			<a class="lnk card-1" href="https://github.com/sulu-one/sulu"><i class="fa fa-github" aria-hidden="true"></i> Code</a>
+			<a class="lnk card-1" href="https://github.com/sulu-one/sulu/tree/master/docs"><i class="fa fa-cogs" aria-hidden="true"></i> API</a> 
+			<a class="lnk card-1" href="https://github.com/sulu-one/sulu/releases"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</a>  
+			<a class="lnk card-1" href="https://github.com/sulu-one/sulu/issues/new"><i class="fa fa-bug" aria-hidden="true"></i></i> Submit a bug</a>  
+			<a class="lnk card-1" href="https://s-a.github.io/donate/"><i class="fa fa-cc-paypal" aria-hidden="true"></i> Donate</a>  
 		</div>
-			 <img src="demo.gif" >
+			<img src="demo.gif" >
  
-
+<br>
+<br>
+ 			<h1>to spread the word...</h1>
+<br><br>
+<br>
+			<div id="social-icons"></div>
+			<script type="text/javascript">
+			    // default configuration
+			    if (!window.socialIcons.setup){
+			        window.socialIcons.setup = {
+			            title   : document.title,
+			            url     : location.href,
+			            subject : "A hackable file manager application",
+			            body    : function(){
+			                return "A crossplatform filemanager written for softwaredevelopment at " + window.socialIcons.setup.url;
+			            }
+			        };
+			    }
+			</script>
 </body>
 </html>
