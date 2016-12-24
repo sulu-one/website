@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>beep</title>
-	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<style type="text/css">
 
 		.card-1 {
@@ -92,125 +93,127 @@
 
 		a,p{
 			display: inline-block;
-			background-color: #000;
-			opacity: 0.9;
+			background-color: #0D0D0D;
+			opacity: 1;
 			color: #fff;
 			margin: 11px;
 			padding: 11px;
 		}	
 		h1,h2{ 
 			display: inline;
-			background-color: #fff;
-			 opacity: 0.7;
-			color: #000;
+			background-color: #FFFFCC;
+			 opacity: 1;
+			color: #0D0D0D;
 			margin: 11px;
 			padding: 11px;
 		}
 		body,html{
-			font-family: 'Anton', sans-serif;
-			font-size: 110%;
+			font-family: 'Titan One', cursive;
+		
 			text-align: center;
 		}
 		#main{
 			margin-top: 2%
 		}
 	</style>
- 
+ 	<style type="text/css">
+ 		.fa{
+ 			font-size: 350%;
+ 		} 		
+
+ 		.fa-windows,.fa-apple,.fa-linux{
+ 			font-size: 220%;
+ 		}
+ 		.logo{
+			display: inline-block;
+			position: relative;
+			    top: 70px;
+    left: 10px;
+		}
+
+		.brand{ 
+ 			font-size: 100%; 
+			color: #0D0D0D;
+			background-color: #FFFFCC;
+		}
+		.ticker{
+			line-height: 10px;
+		}
+
+		a{
+			text-decoration: none;
+		}
+ 	</style>
 </head>
 <body id="selector">
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
-<script>
-    $(function(){
-        $(".element").typed({
-            strings: [
-				'"tab" to "toggleActiveFileSystemView"',
-				'"down" to "navigateToNextRow"',
-				'"up" to "navigateToPreviousRow"',
-				'"enter" to "enterActiveRow"',
-				'"backspace" to "navigateToParentFolder"',
-				'"space" to "selectActiveRow"',
-				'"esc" to "unselectAllRows"',
-				'"ctrl+a" to "selectAll"',
-				'"ctrl+shift+a" to "invertSelection"',
-				'"ctrl+s" to "selectByFileExtension"',
-				'"ctrl+f12" to "settings"',
-				'"f12" to "toggleDevTools"',
-				'"ctrl+alt+left" to "historyJumpBackward"',
-				'"ctrl+alt+right" to "historyJumpForward"',
-				'"right" to "changeDirectory"',
-				'"ctrl+b" to "toggleBookmark"',
-				'"ctrl+shift+b" to "showBookmarks"',
-				'"ctrl+y" to "copyFilenamesWithPath"',
-				'"ctrl+shift+y" to "copyFilenames"',
-				'"ctrl+shift+c" to "copyFileSystemViewPath"',
-				'"ctrl+shift+alt+y" to "copyFilenamesWithExtendedInfo"',
-				'"f5" to "copy"',
-				'"ctrl+f7" to "createFile"',
-				'"f7" to "createFolder"',
-				'"del" to "moveToTrash"',
-				'"f4" to "open"',
-				'"ctrl+p" to "preview"',
-				'"ctrl+enter" to "openShell"',
-				'"ctrl+r" to "reload"',
-				'"f5" to "reload"',
-				'"ctrl+f5" to "reloadHard"',
-				'"f2" to "rename"',
-				'"ctrl+e" to "showItemInFolder"',
-            ],
-            typeSpeed: 10,
-            backDelay: 3000,
-            backSpeed: 0,
-            // shuffle the strings
- 			shuffle: true,
-        });
-        GetRandomBackground()
-    });
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+	<script>
+	    $(function(){
+	        $(".element").typed({
+	            strings: [
+					'for "LINUX". <i class="fa fa-linux brand" aria-hidden="true"></i>',
+					'for "Microsoft Windows". <i class="fa fa-windows brand" aria-hidden="true"></i>',
+					'for "Mac OS X". <i class="fa fa-apple brand" aria-hidden="true"></i>',
+	            ],
+	            typeSpeed: 110,
+	            backDelay: 2500,
+	            backSpeed: 0,
+	            // shuffle the strings
+	 			shuffle: false,
+	 			loop: true,
+	        });
+	        GetRandomBackground()
+	    });
 
-    function GetRandomBackground()
-	{
+	    function GetRandomBackground()
+		{
 
-	  var url = 'http://unsplash.com/rss';
+		  var url = 'http://unsplash.com/rss';
 
-	  $.ajax({
-	    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-	    async: false,
-	    jsonpCallback: 'jsonCallback',
-	    contentType: "application/json",
-	    dataType: 'jsonp',
-	    success: function(json) {
-	      
-	      var min = 0;
-	      var max = json.responseData.feed.entries.length;
-	      // and the formula is:
-	      var random = Math.floor(Math.random() * (max - min + 1)) + min;
+		  $.ajax({
+		    url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+		    async: false,
+		    jsonpCallback: 'jsonCallback',
+		    contentType: "application/json",
+		    dataType: 'jsonp',
+		    success: function(json) {
+		      
+		      var min = 0;
+		      var max = json.responseData.feed.entries.length;
+		      // and the formula is:
+		      var random = Math.floor(Math.random() * (max - min + 1)) + min;
 
-	      var str = json.responseData.feed.entries[random].content;
+		      var str = json.responseData.feed.entries[random].content;
 
-	      var regex = /<img.*?src="(.*?)"/;
-	      var src = regex.exec(str)[1];
+		      var regex = /<img.*?src="(.*?)"/;
+		      var src = regex.exec(str)[1];
 
-	      $('#selector').css('background-image','url('+src+')');
-	      $('#selector').css('background-size','cover');
-	      
-	    }
-	  });
+		      $('#selector').css('background-image','url('+src+')');
+		      $('#selector').css('background-size','cover');
+		      
+		    }
+		  });
 
-	}
+		} 
+	</script>
+	<div id="main">
+			<img class="logo" src="logo__inkscape.svg" width="170">
+<h1 class="card-5">SULU</h1><h2 class="card-3">//</h2><br><br><br>
 
-</script>
-<div id="main">
-	<h1 class="card-5">SULU</h1><br><br>
-	<h2 class="card-3">//</h2><h2 class="card-4">A hackable file manager application for Linux, Windows and OS X</h2><br><br>
-	<a class="card-1" href="https://github.com/sulu-one/sulu">/Source Code</a>
-	<a class="card-1" href=" https://sulu-one.github.io/sulu/docs/api">/Developer API</a> 
-	<a class="card-1" href="https://github.com/sulu-one/sulu/releases">/Downloads</a>  
-	<a class="card-1" href="https://s-a.github.io/donate/">/Donate</a>  
-	<br><br>
-	<p  class="card">
-		You might want to press <span class="element"></span>
-	</p>
-</div>
+		<div>
+			
+			<h2 class="card-4 ticker">A hackable file manager application</h2><h2 class=""><span class="element"></span></h2><br><br>
+		</div>
+
+		<div>
+			<a class="card-1" href="https://github.com/sulu-one/sulu"><i class="fa fa-github" aria-hidden="true"></i> Code</a>
+			<a class="card-1" href=" https://sulu-one.github.io/sulu/docs/api"><i class="fa fa-cogs" aria-hidden="true"></i> API</a> 
+			<a class="card-1" href="https://github.com/sulu-one/sulu/releases"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</a>  
+			<a class="card-1" href="https://s-a.github.io/donate/"><i class="fa fa-cc-paypal" aria-hidden="true"></i> Donate</a>  
+		</div>
+			 <img src="demo.gif" >
+	</div>
 
 </body>
 </html>
