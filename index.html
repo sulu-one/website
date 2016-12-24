@@ -16,7 +16,7 @@
 		  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 		}
 
-		.card-2 {
+		.x3, .card-2 {
 		  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 		}
 
@@ -28,8 +28,11 @@
 		  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 		}
 
-		.card-5 {
+		.social-icon:hover , .card-5 {
 		  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+		}
+		.social-icon-github{
+			background-color: #fff;
 		}
 
 
@@ -100,22 +103,33 @@
 			margin: 11px;
 			padding: 11px;
 		}	
-		h1,h2{ 
+		.x1,.x2{ 
 			display: inline;
-			background-color: #FFFFCC;
+			background-color: #fff;
 			 opacity: 1;
 			color: #0D0D0D;
-			margin: 11px;
-			padding: 11px;
+			
+			padding: 4px;
+		}		
+		.x3{ 
+			background-color: rgba(255,255,255,  0.65);
+			 opacity: 1;
+			color: #0D0D0D;
+			width: 50%;
+			padding: 4px;
+			margin-left: 25%;
+			margin-right: 25%; 
+
 		}
 		body,html{
 			font-family: 'Titan One', cursive;
 		
 			text-align: center;
 		}
-		#main{
-			 
-		}
+hr {
+    height: 30px;  
+  	border:0;
+}
 	</style>
  	<style type="text/css">
  		.fa{
@@ -134,9 +148,7 @@
 			color: #0D0D0D;
 			background-color: #FFFFCC;
 		}
-		.ticker{
-			line-height: 80px;
-		}
+ 
 
 		a{
 			text-decoration: none;
@@ -195,15 +207,21 @@
 
 		} 
 	</script>
- 		 
-		<img class="logo" src="logo-sm.png">
-		<h1 class="card-5">SULU</h1><h2 class="card-3">//</h2><br><br><br>
+
+<h2 class="x3">Share this page and bring your friends! :O)</h2>
+ 		<div id="social-icons"></div>
+		
+<hr>
+		<h1 class=""> <img class="logo" src="logo-sm.png"> SULU</h1> 
 
 		<div>
 			
-			<h2 class="card-4 ticker">A hackable file manager application</h2><h2 class=""><span class="element"></span></h2><br><br>
+			<span class="card-3 x2">//</span> 
+			<div class="card-4 ticker x2">A hackable file manager application</div> <div class="card-1 x2"><span class="element"></span></div>
 		</div>
 
+<hr>
+ 
 		<div>
 			<a class="lnk card-1" href="https://github.com/sulu-one/sulu"><i class="fa fa-github" aria-hidden="true"></i> Code</a>
 			<a class="lnk card-1" href="https://github.com/sulu-one/sulu/tree/master/docs"><i class="fa fa-cogs" aria-hidden="true"></i> API</a> 
@@ -211,14 +229,11 @@
 			<a class="lnk card-1" href="https://github.com/sulu-one/sulu/issues/new"><i class="fa fa-bug" aria-hidden="true"></i></i> Submit a bug</a>  
 			<a class="lnk card-1" href="https://s-a.github.io/donate/"><i class="fa fa-cc-paypal" aria-hidden="true"></i> Donate</a>  
 		</div>
-			<img src="demo.gif" >
- 
-<br>
-<br>
- 			<h1>to spread the word...</h1>
-<br><br>
-<br>
-			<div id="social-icons"></div>
+
+<hr>
+<h2 class="x3">Demo</h2>
+			<img class="card-5" src="demo.gif" > 
+			
 			<script src="look-at-this.min.js"></script>
 			<script type="text/javascript">
 			    // default configuration 
