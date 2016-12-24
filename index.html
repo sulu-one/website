@@ -28,7 +28,7 @@
 		  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 		}
 
-		.social-icon:hover , .card-5 {
+		.x4:hover, .social-icon:hover , .card-5 {
 		  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 		}
 		.social-icon-github{
@@ -112,13 +112,24 @@
 			padding: 4px;
 		}		
 		.x3{ 
-			background-color: rgba(255,255,255,  0.65);
+			background-color: rgba(255,255,255,  1);
 			 opacity: 1;
 			color: #0D0D0D;
 			width: 50%;
 			padding: 4px;
 			margin-left: 25%;
 			margin-right: 25%; 
+
+		}		
+
+		.x4{ 
+			background-color: rgba(255,255,255,  1);
+			 opacity: 1;
+			color: #0D0D0D;
+			width: 96px;
+			height: 96px;
+			padding: 4px;
+			margin-left: 45%; 
 
 		}
 		body,html{
@@ -154,13 +165,12 @@ hr {
 			text-decoration: none;
 			color: #000;
 		}
-		.footer{
-			background-color: #fff;
-			position: fixed;
-			left: 0;
-			bottom: 0;
+		.glow{
+			text-shadow: #FFF 0 0 10px; 
+		}
+		.footer{ 
 			margin:0;
-			padding: 11px;
+			padding: 0;
 			width: 100%;
 		}
  	</style>
@@ -218,14 +228,15 @@ hr {
 		} 
 	</script>
 
-	<h2 class="x3">Share this page and bring your friends! :O)</h2>
+	<h2 class="x3">Hello and welcome. Please share this page and bring your friends to support this project. Awesome! :O)</h2>
 	<div id="social-icons"></div>
 		
 	<hr>
-	<h1 class=""> <img class="logo" src="logo-sm.png"> SULU</h1> 
+	<hr>
+	<hr>
+	<a href="https://github.com/sulu-one/sulu"><h2 class="x4"> <img class="logo" src="logo-sm.png"> SULU</h2> </a>
 
-	<div>
-		
+	<div> 
 		<span class="card-3 x2">//</span> 
 		<div class="card-4 ticker x2">A hackable file manager application</div> <div class="card-1 x2"><span class="element"></span></div>
 	</div>
@@ -241,9 +252,13 @@ hr {
 	</div>
 
 	<hr>
-	<h2 class="x3">Demo</h2>
-	<img class="card-5" src="demo.gif" > 
-	
+
+	<hr>
+	<div class="x3">
+		<h2>Demo</h2>
+		<img class="" src="demo.gif" > 
+		<hr>
+	</div>
 	<script src="look-at-this.min.js"></script>
 	<script type="text/javascript">
 	    // default configuration 
@@ -260,12 +275,18 @@ hr {
 	<hr>
 	<hr>
 	<hr>
-	<p class="footer">
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<hr>
+	<p class="footer glow">
 		<a href="https://github.com/sulu-one">sulu</a>
 		<a href="https://github.com/sulu-one/sulu/blob/master/LICENSE.md">
 			<i class="fa fa-copyright" aria-hidden="true"></i> 2015-2017
 		</a> 
-		<i class="fa fa-code" aria-hidden="true"></i> Made With <i class="fa fa-heart" aria-hidden="true"></i> By <a href="https://github.com/orgs/sulu-one/people">sulu<sup>1</sup> Team</a>
+		<i class="fa fa-code" aria-hidden="true"></i> Made With <i class="fa fa-heart" aria-hidden="true"></i> By <a href="https://github.com/orgs/sulu-one/people">sulu<sub>1</sub> Team</a>
 	</p>
 </body>
 </html>
